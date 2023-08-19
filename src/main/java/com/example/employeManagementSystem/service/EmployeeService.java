@@ -27,8 +27,6 @@ public class EmployeeService {
     @Autowired
     private ModelMapper modelMapper;
 
-
-
     public String saveEmployee(EmployeeDto employeeDto){
         if (employeeRepo.existsById(employeeDto.getEmpId())){
            return VarList.RSP_DUPLICATED;
